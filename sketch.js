@@ -34,7 +34,7 @@ function setup() {
     background(0)
     textFont(ibm)
     textAlign(CENTER)
-    textSize(115)
+    textSize(height/15)
     noCursor()
 
 
