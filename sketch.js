@@ -1,4 +1,5 @@
 var config = {
+    matiz: [140, 255, 200, 0.7],
     xOffset: 140,
     yOffset: 0,
     ruido: 0,
@@ -14,12 +15,13 @@ var config = {
     message: 'W3TWARE',
     movers: null,
     recording: false,
-    font: './OpenType/IBM-Plex-Mono/IBMPlexMono-Italic.otf'
-}, word = null, tmp = 'W3T';
+    font: './OpenType/IBM-Plex-Mono/IBMPlexMono-Light.otf'
+}, word = null, tmp = 'W3T', adjs;
 
 function preload() {
 
     ibm = loadFont(String(config.font))
+
 
     // var scripts = [
     //     "UX"
@@ -28,14 +30,13 @@ function preload() {
 }
 
 function setup() {
-
     createCanvas(windowWidth, windowHeight)
     colorMode(HSB, 255, 255, 255, 1)
     background(0)
     textFont(ibm)
     textAlign(CENTER)
-    textSize(80)
-    noCursor()
+    textSize(height/20)
+    //noCursor()
 
 
 
@@ -49,27 +50,23 @@ function setup() {
 
 function draw() {
     background(0)
-    config.matiz = [config.xOffset, 255, 200, 0.7]
     word == 'W3T' || tmp == 'W3T' ? fill(255) : fill(...config.matiz);
     //strokeWeight(noise(config.yOffset) * 2)
-
-    var s = second()
+    var s = Math.trunc(millis())
     
     if (s % 2 == 0) {
-	word == null ? word = String.toUpperCase(adjs[floor(random(adjs.length))]) : word = word;
+	word == null ? word = adjs[floor(random(adjs.length))].toUpperCase() : word = word;
 	tmp = word
-	text(word + 'WARE', width/4, height/6)
+	text(word + 'WARE', width/2, height/5)
     } else {
 	word = null
-	text(tmp + 'WARE', width/4, height/6)
+	text(tmp + 'WARE', width/2, height/5)
     }
     
     
     text(String(s), width/2, height-100)
-    //word = null
-    
-    
-    // config.xOffset > 230 ? config.xOffset = 30 : config.xOffset+=0.5;
+
+    //config.xOffset > 230 ? config.xOffset = 30 : config.xOffset+=0.5;
     // config.yOffset > width ? config.yOffset = 0 : config.yOffset+=0.05;
     
     //if (recording === true) saveFrames('Test##' + 'png')
@@ -82,7 +79,7 @@ function windowResized() {
 }
 
 function mousePressed() {
-    location.reload()
+    //location.reload()
 }
 
 function keyPressed() {
@@ -134,7 +131,8 @@ function keyPressed() {
 // obj.add([2, 5, 9])
 // console.log(obj.count, obj.sum)  
 
-var adjs = [
+
+adjs = [
     'aback',
     'abaft',
     'abandoned',
@@ -147,7 +145,6 @@ var adjs = [
     'able',
     'abnormal',
     'aboriginal',
-    'abortive',
     'abounding',
     'abrasive',
     'abrupt',
@@ -1201,7 +1198,7 @@ var adjs = [
     'wholesale',
     'wicked',
     'wide',
-    'wide-eyed',
+    'wide-awake',
     'wiggly',
     'wild',
     'willing',
