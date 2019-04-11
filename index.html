@@ -7,6 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.js"></script>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <script src="sketch.js"></script>
     <style>
       article {font-size: 1.025em;
       padding: 20px;
@@ -70,24 +71,16 @@
   <p>Debido a las limitaciones técnicas que sugiere "desconectar la internet", como lo sugiere crítica y metafóricamente la premisa del evento que nos ocupa, resulta necesario entablar un acercamiento a estas tecnologías que cada vez contienen más ímpetu y gozan de mayor adopción. Será cada vez mayor la importancia de generar espacios y dinámicas organizacionales adecuadas para perpetuar redes internacionales basadas en el respeto a lxs usuarixs, a los intereses personales, a la identidad; de formar conocimiento transversal/horizontal con respecto a los usos y posibles abusos de los que la internet resulta hospedera.</p>
 
 </article>
-<script src="sketch.js"></script>
 <script>
+e = ['🇾', '🇦', '🇲', '🇮', '🇮', '🇨', '🇭', '🇮']	
 function loop() {
-	var s = '',
-	e = ['🇾', '🇦', '🇲', '🇮', '🇮', '🇨', '🇭', '🇮'],
-	i, m;
-
-	for (i = 0; i <= e.length; i ++) {
-	if (i == e.length) {
-		s = ''
-	} else {
-		s += '|' + e[i];
+	location.hash = e[Math.floor((Date.now()/100%e.length];
+	setTimeout(loop, 50)
 	}
 
-	location.hash = s;
-	}
-
-	setInterval(loop, 500);
+	window.addEventListener('load', function () {
+		loop();
+	});
 }
 
 
