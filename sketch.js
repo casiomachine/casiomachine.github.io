@@ -195,7 +195,7 @@ var adjs = [
     'complete',
     'complex',
     'concerned',
-    'condemned
+    'condemned',
     'crowded',
     'cruel',
     'cuddly',
@@ -228,7 +228,7 @@ var adjs = [
     'deep',
     'deep
     'determined',
-    'devilish',ly',
+    'devilishly',
     'defeated',
     'defective',
     'defiant',
