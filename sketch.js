@@ -1,4 +1,4 @@
-var tmp = 'W3T', word = null, contDiv, canvas;
+var tmp = 'W3T', word = null, contDiv, canvas, content;
 
 function setup() {
     contDiv = select('#cont')
