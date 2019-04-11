@@ -72,19 +72,16 @@
 
 </article>
 <script>
-var e = ['🇾', '🇦', '🇲', '🇮', '🇮', '🇨', '🇭', '🇮']	
+var e = ['🇾', '🇦', '🇲', '🇮', '🇮', '🇨', '🇭', '🇮'];
 function loop() {
-	location.hash = e[Math.floor((Date.now()/100%e.length];
+	location.hash += e[Math.floor(Math.random() * e.length)];
 	setTimeout(loop, 50)
 	}
 
-	window.addEventListener('load', function () {
+	window.addEventListener('load', function() {
 		loop();
 	});
 }
-
-
-loop();
 </script>
 
 </body>
