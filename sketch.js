@@ -226,7 +226,6 @@ var adjs = [
     'decisive',
     'decorous',
     'deep',
-    'deep
     'determined',
     'devilishly',
     'defeated',
