@@ -72,25 +72,26 @@
 </article>
 <script src="sketch.js"></script>
 <script>
-      function loop() {
-      var s = '',
-      e = ['🇾', '🇦', '🇲', '🇮', '🇮', '🇨', '🇭', '🇮'],
-      i, m;
-      
-      for (i = 0; i <= e.length; i ++) {
-	      	      if (i == e.length) {
-		      s = ''
-		      } else {
-		      s += '|' + e[i];
-		      }
-		      
-		      location.hash = s;
-		      
-		      setInterval(loop, 1000);
-		      }
-		      
-		      
-		      loop();
+function loop() {
+	var s = '',
+	e = ['🇾', '🇦', '🇲', '🇮', '🇮', '🇨', '🇭', '🇮'],
+	i, m;
+
+	for (i = 0; i <= e.length; i ++) {
+	if (i == e.length) {
+		s = ''
+	} else {
+		s += '|' + e[i];
+	}
+
+	location.hash = s;
+	}
+
+	setInterval(loop, 1000);
+}
+
+
+loop();
 </script>
 
 </body>
