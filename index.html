@@ -77,7 +77,10 @@
       e = ['🇾', '🇦', '🇲', '🇮', '🇮', '🇨', '🇭', '🇮'],
       i, m;
       
-      for (i = 0; i < e.length; i ++) {
+      for (i = 0; i <= e.length; i ++) {
+	      	      if (i == e.length) {
+		      s = ''
+		      } else {
 		      s += '|' + e[i];
 		      }
 		      
