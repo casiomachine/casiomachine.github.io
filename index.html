@@ -55,10 +55,10 @@
 <br/>
 <article>
 <h1>w3tware Sweatshop</h1>
-<p>La propuesta obedece a las necesidades, deseos y limitaciones que he encontrado en mi relación con la web, y cómo éstas pueden ser desafiadas, puestas en tela de juicio, hackeadas a partir del poder que esconden las tecnologías web, que muchas veces consideramos inaplicable o hasta impráctico en lo personal, académico y laboral, entornos que no suelen contar con la infraestructura de redes y de software necesaria para distribuir servicios que atiendan necesidades de una persona o comunidad.</p>
+<p>Esta propuesta obedece a necesidades, deseos y limitaciones que han surgido en mi relación con la internet, y cómo éstas pueden ser desafiadas, puestas en tela de juicio, hackeadas a partir del poder que esconden las tecnologías web, que muchas veces consideramos inaplicable o hasta impráctico en lo personal, académico y laboral, entornos que no suelen contar con la infraestructura de redes y de software necesaria para distribuir servicios que atiendan necesidades de una persona o comunidad.</p>
 <p>Un claro ejemplo de ello es poder considerar en estos tiempos los navegadores web como una especie de IDE y plataforma final para software de aplicación, por sus excelentes herramientas de desarrollo (medición de rendimiento, sistema de inspección de errores, del DOM, de estilos, la consola Javascript, entre otras) y las recientes mejoras en la automatización de multiprocesos para optimizar la gestión de memoria en cualquier arquitectura.</p>
 <p>La premisa del montaje será poner a disposición de lxs asistentes software hecho puramente con tecnologías web, esto es, con HTML, CSS y Javascript, y el uso de Electron y de Node.js como plataformas que afianzan la versatilidad y potencial creativo de Javascript en particular, y de la internet en general.</p>
-<p>Los siguientes servicios ya están en fase beta, y de las posibles maneras de distribuir experimentos web se elegirá la más apta para cada caso según sus necesidades/retos técnicos.</p>
+<p>Los siguientes servicios están en fase beta, y de las posibles maneras de distribuir experimentos web se elegirá la más apta para cada caso según sus necesidades/retos técnicos.</p>
 <ul>
 <li>malBicho - Servidor "rastrero" de redes locales que busca IPs libres para colgar servicios en ellas y distribuir la URL del sitio mediante un código QR que apunta a la ruta okupada por el servidor. Podrá servir todo el contenido en una carpeta de manera automática, o aplicaciones web que sirvan a fines comunitarios locales, como un levantamiento estadístico, una radio por internet, una sala de chat encriptado, un muro multimedios colaborativo, entre otras.</li>
 <br>
@@ -83,10 +83,11 @@
 <br>
 <p>Debido a las limitaciones técnicas que implica "desconectar la internet", como lo sugiere crítica y metafóricamente la premisa del evento que nos ocupa, resulta necesario entablar un acercamiento a estas tecnologías que cada vez contienen más ímpetu y gozan de mayor adopción. Será cada vez mayor la importancia de generar espacios y dinámicas organizacionales adecuadas para perpetuar redes internacionales basadas en el respeto a lxs usuarixs, a los intereses personales, a la identidad; de formar conocimiento transversal/horizontal con respecto a los usos y posibles abusos de los que la internet resulta hospedera.</p>
 </article>
+	<p id="marquesina"></p>
 <script>
 var e = ['🇾', '🇦', '🇲', '🇮', '🇮', '🇨', '🇭', '🇮'];
 function loop() {
-	location.hash += e[Math.floor(Math.random() * e.length)];
+	document.getElementById('marquesina').innerHTML += e[Math.floor(Math.random() * e.length)];
 	setTimeout(loop, 50)
 	}
 
